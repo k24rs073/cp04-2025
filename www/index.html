@@ -204,6 +204,11 @@
         period = 60* parseInt( $("#minute").val() ) + parseInt( $("#second").val() );
         $("#time").html("経過時間： 0");
         $("#remain").html("残り時間： " + period);
+
+        $("#btnD").html("25min");
+        $("#btnE").html("rest");
+        $("#btnD","#btnE").css("font-size","medium");
+        $("#btnD","#btnE").css("font-family","sans-serif");
     }
 
     function btnDClick(e){
@@ -222,6 +227,9 @@
         img.onload = function(){
             ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
         }
+        $("#btnD").html("Finght");
+        $("#btnD").css("font-size","x-large");
+        $("#btnD").css("font-family","fantasy");
     }
     function btnEClick(e){
         active = false;
@@ -239,6 +247,9 @@
         img.onload = function(){
             ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
         }
+        $("#btnE").html("Good");
+        $("#btnE").css("font-size","x-large");
+        $("#btnE").css("font-family","fantasy");
     }
     
  
@@ -257,6 +268,7 @@
         }
     } 
 
+
   </script>
 </head>
 <body>
@@ -270,7 +282,7 @@
     <button id="btnA">Start</button>  
     <button id="btnB">Stop</button>  
     <button id="btnC">Set</button>
-    <button id="btnD">aaa</button>
+    <button id="btnD">25min</button>
     <button id="btnE">rest</button>  
     <input type="number" id="minute" value=0 >
     <input type="number" id="second" value=15 >
