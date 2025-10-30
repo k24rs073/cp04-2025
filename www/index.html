@@ -166,6 +166,7 @@
     var period = 0;
     var rest = 0;
     var etime = 0;
+    var dPressed = false; //ボタンdが押されたかどうかのフラグ
 
     // ボタンの初期設定
     function init(){
@@ -195,6 +196,12 @@
     function btnAClick(e){
         active = true;
         startTime = new Date();
+
+        if(dPressed == true){
+            var maru = $("#minuteStr").html();  // 現在書かれている〇を取得
+            $("#minuteStr").html(maru + "〇");
+            dPressed = false; // 一度増やしたらリセット
+        }
     }
 
     // ButtonBがクリックされた時の処理
@@ -212,7 +219,6 @@
 
         $("#btnD").html("25min");
         $("#btnE").html("rest");
- //       $("#btnD","#btnE").css("font-size","medium");
         $("#btnD").css("font-family","Times");
         $("#btnE").css("font-family","Times");        
     }
@@ -236,6 +242,8 @@
         $("#btnD").html("Finght");
         $("#btnD").css("font-size","x-large");
         $("#btnD").css("font-family","fantasy");
+
+        dPressed = true;  //ボタンDが押されたことを記録
     }
     function btnEClick(e){
         active = false;
@@ -282,7 +290,7 @@
 <body>
     <canvas id="mycanvas" width="200" height="200">Test</canvas>
 
-    <div id="minuteStr">〇</div>
+    <div id="minuteStr">セット数</div>
     <div id="secondStr">〇</div>
 
     <div id="pomo">ポモドーロタイマー</div>
