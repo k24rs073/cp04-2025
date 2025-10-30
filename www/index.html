@@ -45,6 +45,10 @@
         $('#btnE').click(function(e) {
             btnEClick(e);
         });
+
+        $('#pomo').click(function(e) {
+            pomoClick(e);
+        });
         init();
     });
     
@@ -170,6 +174,7 @@
         $('#btnC').prop('disabled', false);
         $('#btnD').prop('disabled', false);
         $('#btnE').prop('disabled', false);
+        $('#pomo').prop('disabled', false);
     }
 
     // Alarmの処理
@@ -252,7 +257,9 @@
         $("#btnE").css("font-size","x-large");
         $("#btnE").css("font-family","fantasy");
     }
-    
+    function pomoClick(e){
+        $("#pomoex").html("1980年代にイタリア人のフランチェスコ・シリロによって考案された時間管理術、ポモドーロテクニックを利用したタイマー");
+    }
  
     // 繰り返し実行する処理
     function timer(){
@@ -279,6 +286,7 @@
     <div id="secondStr">〇</div>
 
     <div id="pomo">ポモドーロタイマー</div>
+    <div id="pomoex"></div>
 
     <div id="remain">Remaining time</div>
     <div id="time">Time</div>

@@ -61,15 +61,6 @@
         position:absolute; top:380px; left:70%; width:28%; height:60px; 
     }
 
-    #pomo {
-        color: #d61919;
-        font-size: 20px;
-        text-align: left;
-        position:absolute; top:600px; 
-        left:27%;
-        
-    }
-
     #btnD {
         font-size: 30px;
         position:absolute; top:530px; left:20%; width:28%; height:60px; 
@@ -80,6 +71,21 @@
         position:absolute; top:530px; left:50%; width:28%; height:60px; 
     }
 
+    #pomo {
+        color: #d61919;
+        font-size: 20px;
+        text-align: left;
+        position:absolute; top:600px; 
+        left:27%; 
+    }
+
+    #pomoex {
+        color: #d61919;
+        font-size: 20px;
+        text-align: left;
+        position:absolute; top:630px; 
+        left:5%; 
+    }
     #minute {
         font-size: 30px;
         position:absolute; top:450px; left:60px; width:80px; height:40px;   
